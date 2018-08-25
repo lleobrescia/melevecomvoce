@@ -89,3 +89,7 @@ $RECYCLE.BIN/
 
 ### Custom ###
 dist
+
+### Generated Files ###
+style.css
+woocommerce.css
