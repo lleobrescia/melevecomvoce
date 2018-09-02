@@ -3,7 +3,7 @@ Theme Name: Me Leve Com Voce
 Theme URI: http://melevecomvoce.com.br/
 Author: Leo Brescia
 Author URI: http://leobrescia.com.br/
-Description: Description
+Description: Theme crteate by Joaquim Rodrigues <design@joaquimrodrigues.com.br>(www.joaquimrodrigues.com.br).
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -35,6 +35,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Clearings
 # Widgets
 # Content
+  ## Footer
 	## Posts and pages
 	## Comments
 # Infinite scroll
@@ -50,6 +51,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 /*--------------------------------------------------------------
 # Normalize

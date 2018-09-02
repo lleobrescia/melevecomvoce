@@ -125,9 +125,11 @@ add_action('widgets_init', 'melevecomvoce_widgets_init');
  */
 function melevecomvoce_scripts()
 {
+  wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
   wp_enqueue_style('font-roboto', 'https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
-  wp_enqueue_style('melevecomvoce-style', get_stylesheet_uri(), 'font-roboto');
+  wp_enqueue_style('melevecomvoce-style', get_stylesheet_uri(), array('font-awesome', 'font-roboto'));
 
   wp_enqueue_script('melevecomvoce-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
 

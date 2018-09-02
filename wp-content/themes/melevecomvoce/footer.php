@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -14,19 +15,32 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'melevecomvoce' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'melevecomvoce' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'melevecomvoce' ), 'melevecomvoce', '<a href="https://automattic.com/">Automattic</a>' );
-				?>
-		</div><!-- .site-info -->
+    <div class="container-fluid">
+      <section class="site-info">
+        <img class="site-info__logo" src="<?= get_template_directory_uri() ?>/images/me_leve_com_voce-footer.png" alt="Me Leve com Você">
+
+        <div class="site-info__text">
+          Para elogios, sugestões de conteúdo, parcerias ou apenas <br>para trocar uma idéia, entre em contato com a gente:
+        </div><!-- site-info__text -->
+
+        <div class="site-info__contact">
+          viagem@melevecomvoce.com.br  /  +55 31 98798.1160
+        </div><!-- site-info__contact -->
+
+        <div class="site-info__social">
+          <a href="" rel="external" target="_blank">
+            <i class="fa fa-youtube-square"></i>
+          </a>
+          <a href="" rel="external" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="" rel="external" target="_blank">
+            <i class="fa fa-facebook-square"></i>
+          </a>
+        </div><!-- site-info__social -->
+
+      </section> <!-- site-info -->
+    </div>  <!-- container-fluid -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
