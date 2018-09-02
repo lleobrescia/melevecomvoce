@@ -19,24 +19,42 @@
       <section class="site-info">
         <img class="site-info__logo" src="<?= get_template_directory_uri() ?>/images/me_leve_com_voce-footer.png" alt="Me Leve com Você">
 
-        <div class="site-info__text">
-          Para elogios, sugestões de conteúdo, parcerias ou apenas <br>para trocar uma idéia, entre em contato com a gente:
-        </div><!-- site-info__text -->
+        <?php
+        $contact = get_field('contato_rodape', 'option');
+        $facebook = get_field('link_facebook', 'option');
+        $instagram = get_field('link_instagram', 'option');
+        $text = get_field('rodape_text', 'option');
+        $youtube = get_field('link_youtube', 'option');
+        ?>
 
+        <?php if ($text) : ?>
+        <div class="site-info__text">
+          <?= $text; ?>
+        </div><!-- site-info__text -->
+        <?php endif; ?>
+
+        <?php if ($contact) : ?>
         <div class="site-info__contact">
-          viagem@melevecomvoce.com.br  /  +55 31 98798.1160
+        <?= $contact; ?>
         </div><!-- site-info__contact -->
+        <?php endif; ?>
 
         <div class="site-info__social">
-          <a href="" rel="external" target="_blank">
+        <?php if ($youtube) : ?>
+          <a href="<?= $youtube ?>" rel="external" target="_blank">
             <i class="fa fa-youtube-square"></i>
           </a>
-          <a href="" rel="external" target="_blank">
+        <?php endif; ?>
+        <?php if ($instagram) : ?>
+          <a href="<?= $instagram ?>" rel="external" target="_blank">
             <i class="fa fa-instagram"></i>
           </a>
-          <a href="" rel="external" target="_blank">
+        <?php endif; ?>
+          <?php if ($facebook) : ?>
+          <a href="<?= $facebook ?>" rel="external" target="_blank">
             <i class="fa fa-facebook-square"></i>
           </a>
+        <?php endif; ?>
         </div><!-- site-info__social -->
 
       </section> <!-- site-info -->
