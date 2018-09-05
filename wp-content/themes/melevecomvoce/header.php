@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -10,49 +11,32 @@
  */
 
 ?>
-<!doctype html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" <?php language_attributes(); ?> >
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" <?php language_attributes(); ?> >
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html class="no-js"  <?php language_attributes(); ?>>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+  <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'melevecomvoce' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$melevecomvoce_description = get_bloginfo( 'description', 'display' );
-			if ( $melevecomvoce_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $melevecomvoce_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'melevecomvoce' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+    <?php melevecomvoce_custom_menu("menu-1"); ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

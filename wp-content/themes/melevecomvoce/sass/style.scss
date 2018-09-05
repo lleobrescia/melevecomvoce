@@ -24,6 +24,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
+# Bootstrap
+  ## Colors
+  ## Layout
 # Typography
 # Elements
 # Forms
@@ -51,12 +54,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-@import "../node_modules/bootstrap/scss/bootstrap";
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 @import "normalize";
+
+/*--------------------------------------------------------------
+# Bootstrap
+--------------------------------------------------------------*/
+@import "modules/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 /*--------------------------------------------------------------
 # Typography
@@ -112,10 +120,4 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
-
-/*--------------------------------------------------------------
-
-# Theme
---------------------------------------------------------------*/
-@import "theme";
 
