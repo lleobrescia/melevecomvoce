@@ -13,7 +13,10 @@
  */
 
 get_header();
+$banner = get_field('banner');
 ?>
+
+  <section class="banner" style="background-image:url('<?= $banner['url'] ?>')"></section><!-- banner -->
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
