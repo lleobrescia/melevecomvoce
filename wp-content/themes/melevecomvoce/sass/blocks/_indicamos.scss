@@ -1,0 +1,36 @@
+.indicamos {
+  background-color: #b0d6df;
+  background-image: url('images/indicamos-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: -238px;
+  padding-bottom: 315px;
+  padding-top: 94px;
+
+  .indicamos__title {
+    color: white;
+    text-align: center;
+    font-size: 1.125rem;
+    margin-bottom: 45px;
+
+    span {
+      font-size: 3rem;
+      font-family: 'BeyondTheMountains', sans-serif;
+    }
+  }
+
+  .indicamos__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    .indicamos-list__item {
+      @include media-breakpoint-up(sm) {
+        display: inline-block;
+      }
+
+      padding: 30px 20px
+    }
+  }
+}
