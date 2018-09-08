@@ -25,6 +25,20 @@ $banner = get_field('banner');
 		</main><!-- #main -->
   </div><!-- #primary -->
 
+  <section class="instagram">
+    <div class="container text-center">
+      <h2 class="instagram__title">
+        <span>
+          nossa novidades,<br>
+          fresquinhas no
+        </span>
+        <img src="<?= get_template_directory_uri() ?>/images/instagram-tile.png" alt="@melevecomvoce">
+      </h2>
+      <!-- LightWidget WIDGET -->
+      <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/bca394cd617a59ea8c854df880b9e370.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+    </div><!-- container -->
+  </section>
+
   <section class="indicamos">
     <h2 class="indicamos__title">
       nós seguimos / <span>indicamos</span>
