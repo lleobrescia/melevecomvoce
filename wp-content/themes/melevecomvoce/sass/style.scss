@@ -38,9 +38,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Clearings
 # Widgets
 # Content
+  ## Header
   ## Footer
+  ## Site content
 	## Posts and pages
   ## Comments
+# Pages
 # Blocks
   ## Banner
   ## Sobre Home
@@ -115,6 +118,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Content
 --------------------------------------------------------------*/
 @import "site/site";
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import "pages/pages";
 
 /*--------------------------------------------------------------
 # Blocks
