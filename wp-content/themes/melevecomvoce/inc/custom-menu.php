@@ -68,7 +68,7 @@ function melevecomvoce_custom_menu($theme_location)
           $menu_list .= '<li class="dropdown '.$dropdownClass.'">'. "\n";
           $menu_list .= '<a href="' . $menu_item->url . '" class="dropdown-toggle">' . $menu_item->title . '</a>' . "\n";
 
-          $menu_list .= '<ul class="dropdown-menu '.$bool .'">' . "\n";
+          $menu_list .= '<ul class="dropdown-menu">' . "\n";
           $menu_list .= implode("\n", $menu_array);
           $menu_list .= '</ul>' . "\n";
 

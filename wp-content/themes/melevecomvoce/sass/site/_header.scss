@@ -106,8 +106,8 @@
       }
 
       &.dropdown--image {
-        @include media-breakpoint-up(lg) {
-          & {
+        @include media-breakpoint-down(lg) {
+          .dropdown-menu {
             display: none;
           }
         }
