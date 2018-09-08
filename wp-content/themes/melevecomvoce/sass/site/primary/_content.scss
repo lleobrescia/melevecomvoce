@@ -1,5 +1,12 @@
-.site-content{
+.site-content {
   background: white;
   margin-bottom: 73px;
   padding-bottom: 150px;
+}
+
+.home {
+  .site-content {
+    padding: 0;
+    margin: 0;
+  }
 }
