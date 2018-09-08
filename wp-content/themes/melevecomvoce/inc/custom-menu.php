@@ -7,6 +7,8 @@
 
 function melevecomvoce_custom_menu($theme_location)
 {
+  $url_info = parse_url( home_url() );
+
   if (($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location])) {
 
     $custom_logo_id = get_theme_mod('custom_logo');
@@ -18,7 +20,11 @@ function melevecomvoce_custom_menu($theme_location)
     $menu_list = '<nav id="site-navigation" class="nav-main navbar navbar-expand-lg navbar-light">' . "\n";
     $menu_list .= '<div class="container">' . "\n";
 
-    $menu_list .= '<a herf="' . home_url() . '" ' . 'title="' . get_bloginfo('name') . '" rel="home" class="nav-main__logo"><img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '"></a>' . "\n";
+    $menu_list .= '<a href="' . home_url() . '"
+    title="' . get_bloginfo('name') . '"
+    rel="home" class="nav-main__logo">
+      <img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '">
+    </a>' . "\n";
 
 
     $menu_list .= '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">' . "\n";
