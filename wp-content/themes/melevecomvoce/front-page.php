@@ -13,10 +13,44 @@
  */
 
 get_header();
-$banner = get_field('banner');
+$banner      = get_field('banner');
+$foto        = get_field('foto_');
+$link        = get_field('link_para_a_pagina');
+$localizacao = get_field('localizacao');
+$resumo      = get_field('resumo');
+$titulo      = get_field('titulo');
 ?>
 
   <section class="banner" style="background-image:url('<?= $banner['url'] ?>')"></section><!-- banner -->
+
+  <section class="sobre-home">
+    <div class="container">
+      <div class="row">
+        <div class="col-2 offset-md-1">
+          <img class="img-fluid" src="<?= $foto['url']; ?>" alt="<?= $titulo; ?>">
+        </div><!-- col-2 -->
+
+        <div class="col-10 col-md-7">
+          <h1 class="sobre-home__title">
+            <?= $titulo; ?>
+            <span class="sobre-home__subtitle">
+              <i class="fa fa-map-marker" aria-hidden="true"></i> <?= $localizacao; ?>
+            </span>
+          </h1>
+
+          <div class="sobre-home__resumo">
+            <?= $resumo; ?>
+          </div><!-- sobre-home__resumo -->
+
+          <a href="<?= $link; ?>" rel="next" title="veja mais sobre a gente :)">
+          veja mais sobre a gente :)
+          </a>
+
+        </div><!-- col-7 -->
+
+      </div><!-- row -->
+    </div><!-- container -->
+  </section><!-- sobre-home -->
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -33,11 +67,11 @@ $banner = get_field('banner');
           fresquinhas no
         </span>
         <img src="<?= get_template_directory_uri() ?>/images/instagram-tile.png" alt="@melevecomvoce">
-      </h2>
+      </h2><!-- instagram__title -->
       <!-- LightWidget WIDGET -->
       <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/bca394cd617a59ea8c854df880b9e370.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
     </div><!-- container -->
-  </section>
+  </section><!-- instagram -->
 
   <section class="indicamos">
     <h2 class="indicamos__title">
@@ -74,7 +108,7 @@ $banner = get_field('banner');
         </div><!-- col-8 -->
       </div><!-- row -->
     </div><!-- container -->
-  </section>
+  </section><!-- indicamos -->
 
 <?php
 get_footer();

@@ -1,0 +1,39 @@
+.sobre-home {
+  padding-bottom: 34px;
+  padding-top: 34px;
+  background-color: white;
+
+  .sobre-home__title {
+    font-size: 1.5rem;
+    color: #333333;
+    font-weight: 500;
+
+    @media (min-width: 1360px) {
+      & {
+        margin-top: 15px;
+      }
+    }
+
+    .sobre-home__subtitle {
+      color: #62aec1;
+      font-size: 1rem;
+      display: block;
+      margin-bottom: 18px;
+    }
+  }
+
+  .sobre-home__resumo {
+    p {
+      font-size: 0.8125rem;
+      color: #333333;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+  }
+
+  a {
+    text-align: right;
+    display: block;
+    text-decoration: none;
+  }
+}
