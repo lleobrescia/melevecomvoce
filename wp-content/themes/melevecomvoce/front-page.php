@@ -53,8 +53,17 @@ $titulo      = get_field('titulo');
   </section><!-- sobre-home -->
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main container">
 
+      <div class="post-list">
+        <?php
+        $query = new WP_Query(array( 'posts_per_page' => '3'));
+
+        while ( $query->have_posts() ): $query->the_post();
+          get_template_part( 'template-parts/content', 'list' );
+        endwhile; ?>
+        <?php wp_reset_postdata(); ?>
+      </div><!-- post-list -->
 
 		</main><!-- #main -->
   </div><!-- #primary -->
