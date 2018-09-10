@@ -70,8 +70,15 @@
       left: 0;
       right: 0;
 
-      &:hover+.entry-header .post__image .post__hover {
-        display: flex;
+      &:hover+.entry-header .post__image {
+        img {
+          object-fit: none;
+          width: 10000px;
+        }
+
+        .post__hover {
+          display: flex;
+        }
       }
     }
 

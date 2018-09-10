@@ -54,17 +54,7 @@ $titulo      = get_field('titulo');
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container">
-
-      <div class="post-list">
-        <?php
-        $query = new WP_Query(array( 'posts_per_page' => '3'));
-
-        while ( $query->have_posts() ): $query->the_post();
-          get_template_part( 'template-parts/content', 'list' );
-        endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-      </div><!-- post-list -->
-
+      <?= do_shortcode('[ajax_load_more post_type="post" posts_per_page="3" scroll="false" button_label="Carregar mais postagens" button_loading_label="Carregando..."]'); ?>
 		</main><!-- #main -->
   </div><!-- #primary -->
 
