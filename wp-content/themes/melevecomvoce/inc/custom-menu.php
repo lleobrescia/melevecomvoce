@@ -1,9 +1,10 @@
 <?php
-// Intented to use bootstrap 4.
-// Location is like a 'primary'
-// After, you print menu just add melevecomvoce_custom_menu("primary") in your preferred position;
-
-#add this function in your theme functions.php
+/**
+ * Custom menu intented to use bootstrap 4.
+ *
+ *
+ * @package Me Leve Com Voce
+ */
 
 function melevecomvoce_custom_menu($theme_location)
 {

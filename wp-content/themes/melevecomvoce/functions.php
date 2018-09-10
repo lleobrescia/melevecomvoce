@@ -171,6 +171,11 @@ require get_template_directory() . '/inc/options-page.php';
 require get_template_directory() . '/inc/custom-menu.php';
 
 /**
+ * Custom breadcrumb.
+ */
+require get_template_directory() . '/inc/breadcrumb.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if (defined('JETPACK__VERSION')) {
