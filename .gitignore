@@ -98,3 +98,14 @@ wp-content/themes/twenty*/
 
 # ignore node/grunt dependency directories
 node_modules/
+wp-content/themes/melevecomvoce/dist/
+
+wp-content/themes/melevecomvoce/\.tmp/
+
+wp-content/themes/melevecomvoce/maps/
+
+wp-content/themes/melevecomvoce/style\.css
+
+wp-content/themes/melevecomvoce/woocommerce\.css
+
+wp-content/themes/melevecomvoce/package-lock\.json

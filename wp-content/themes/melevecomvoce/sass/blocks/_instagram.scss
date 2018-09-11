@@ -1,0 +1,21 @@
+.instagram {
+  background: #454545;
+  padding-top: 60px;
+
+  .lightwidget__image {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .instagram__title {
+    color: white;
+    margin-bottom: 48px;
+
+    span {
+      text-align: left;
+      font-size: 1.125rem;
+      display: inline-block;
+    }
+  }
+}

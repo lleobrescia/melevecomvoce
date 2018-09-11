@@ -1,0 +1,41 @@
+.site-footer {
+  min-height: 565px;
+  background: url(images/footer_bg.png) center no-repeat;
+  position: relative;
+
+  .site-info {
+    text-align: center;
+    padding-top: 127px;
+
+    .site-info__logo {
+      display: inline-block;
+      margin-bottom: 31px;
+    }
+
+    .site-info__text {
+      font-size: 0.875rem;
+      line-height: 18px;
+      margin-bottom: 0.875rem
+    }
+
+    .site-info__contact {
+      color: $color__text-second;
+      font-size: 1rem;
+      margin-bottom: 21px;
+    }
+
+    .site-info__social {
+      a {
+        color: $color__text-second;
+        display: inline-block;
+        margin: 0 4px;
+        font-size: 1.375rem;
+
+        &:hover {
+          text-decoration: none;
+          color: $color__link-hover;
+        }
+      }
+    }
+  }
+}

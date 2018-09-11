@@ -1,0 +1,32 @@
+.related-posts {
+  padding-bottom: 110px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      max-width: 294px;
+      padding: 0 22px;
+
+      figure {
+        margin: 0;
+      }
+
+      h3 {
+        color: #62aec1;
+        font-size: 1.5rem;
+        margin-top: 10px;
+
+        span {
+          color: #999999;
+          font-size: 0.75rem;
+          display: block;
+        }
+      }
+    }
+  }
+}

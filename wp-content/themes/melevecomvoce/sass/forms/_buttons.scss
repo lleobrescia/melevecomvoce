@@ -1,0 +1,19 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  padding: 18px;
+  background: $color__link;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 18px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: $color__link-hover;
+  }
+}
