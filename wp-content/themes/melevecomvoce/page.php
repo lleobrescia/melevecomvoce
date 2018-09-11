@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages
  *
@@ -17,32 +18,31 @@ get_header();
 <header class="page-banner">
   <figure>
     <?php
-    $image = wp_get_attachment_image_src( get_post_thumbnail_id(),"full");
-    echo get_the_post_thumbnail( get_the_ID(), 'full');
+    $image = wp_get_attachment_image_src(get_post_thumbnail_id(), "full");
+    echo get_the_post_thumbnail(get_the_ID(), 'full');
     ?>
   </figure>
 </header>
 
-<div>
-  <?php bloglite_breadcrumb(); ?>
-</div>
+<div class="breadcrumb container">
+  <?php melevecomvoce_breadcrumb(); ?>
+</div><!-- breadcrumb -->
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+        <?php
+          while ( have_posts() ) :
+            the_post();
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+            get_template_part( 'template-parts/content', 'page' );
 
-			get_template_part( 'template-parts/content', 'page' );
+          endwhile; // End of the loop.
+          ?>
+        </div><!-- col-lg-10 -->
+      </div><!-- row -->
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
