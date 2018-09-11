@@ -14,6 +14,18 @@
 
 get_header();
 ?>
+<header class="page-banner">
+  <figure>
+    <?php
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id(),"full");
+    echo get_the_post_thumbnail( get_the_ID(), 'full');
+    ?>
+  </figure>
+</header>
+
+<div>
+  <?php bloglite_breadcrumb(); ?>
+</div>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -36,5 +48,4 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

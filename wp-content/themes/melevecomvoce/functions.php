@@ -176,6 +176,11 @@ require get_template_directory() . '/inc/custom-menu.php';
 require get_template_directory() . '/inc/breadcrumb.php';
 
 /**
+ * Related Posts
+ */
+require get_template_directory() . '/inc/related-posts.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if (defined('JETPACK__VERSION')) {
