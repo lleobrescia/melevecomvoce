@@ -16,7 +16,7 @@
 
 	<footer id="colophon" class="site-footer">
     <div class="container-fluid">
-      <section class="site-info">
+      <section id="contato" class="site-info">
         <img class="site-info__logo" src="<?= get_template_directory_uri() ?>/images/me_leve_com_voce-footer.png" alt="Me Leve com Você">
 
         <?php
