@@ -56,8 +56,19 @@
   &.post--list {
     position: relative;
 
+    .entry-content {
+      padding-bottom: 0;
+    }
+
     .post__image {
       position: relative;
+      overflow: hidden;
+
+      img {
+        -moz-osx-font-smoothing: grayscale;
+        transition-duration: 0.5s;
+        transition-property: transform;
+      }
     }
 
     .post__link {
@@ -72,12 +83,12 @@
 
       &:hover+.entry-header .post__image {
         img {
-          object-fit: none;
-          width: 10000px;
+          transform: scale(1.1);
         }
 
         .post__hover {
-          display: flex;
+          opacity: 1;
+
         }
       }
     }
@@ -92,9 +103,12 @@
       right: 0;
       text-align: center;
       background-color: #00000060;
-      display: none;
+      display: flex;
       justify-content: center;
       align-items: center;
+      transition-duration: 0.3s;
+      opacity: 0;
+      transition-property: opacity;
 
       i {
         color: white;
