@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Custom menu intented to use bootstrap 4.
  *
@@ -8,7 +9,7 @@
 
 function melevecomvoce_custom_menu($theme_location)
 {
-  $url_info = parse_url( home_url() );
+  $url_info = parse_url(home_url());
 
   if (($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location])) {
 
@@ -53,16 +54,23 @@ function melevecomvoce_custom_menu($theme_location)
             $image = get_field("imagem", "category_" . $submenu->object_id);
             $liClass = 'nav-item';
 
-            if ($image) {
+            if ($image['url'] != null) {
               $liClass = 'nav-item nav-item--image';
               $hasImage = true;
+
+              $menu_array[] = '<li class="' . $liClass . '">
+                <a class="nav-link" rel="next" href="' . $submenu->url . '">
+                <img src="' . $image['url'] . '" alt="' . $submenu->title . '">
+                ' . $submenu->title . '
+                </a></li>' . "\n";
+            } else {
+              $menu_array[] = '<li class="' . $liClass . '">
+                <a class="nav-link" rel="next" href="' . $submenu->url . '">
+                ' . $submenu->title . '
+                </a></li>' . "\n";
             }
 
-            $menu_array[] = '<li class="'.$liClass.'">
-            <a class="nav-link" rel="next" href="' . $submenu->url . '">
-            <img src="' . $image['url'] . '" alt="' . $submenu->title . '">
-            ' . $submenu->title . '
-            </a></li>' . "\n";
+
           }
         }
         if ($bool == true && count($menu_array) > 0) {
@@ -72,8 +80,8 @@ function melevecomvoce_custom_menu($theme_location)
           }
 
 
-          $menu_list .= '<li class="dropdown '.$dropdownClass.'">'. "\n";
-          $menu_list .= '<a href="' . $menu_item->url . '" class="dropdown-toggle">' . $menu_item->title . '</a>' . "\n";
+          $menu_list .= '<li class="' . $dropdownClass . '">' . "\n";
+          $menu_list .= '<a href="javascript:void(0)" class="dropdown-toggle">' . $menu_item->title . '</a>' . "\n";
 
           $menu_list .= '<ul class="dropdown-menu">' . "\n";
           $menu_list .= implode("\n", $menu_array);

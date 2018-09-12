@@ -9,7 +9,7 @@
 
 ?>
 
-<section id="post-<?php the_ID(); ?>" <?php post_class('post--list post'); ?>>
+<section id="post-<?php the_ID(); ?>" <?php post_class('post--list post fadeInUpBig wow'); ?>>
  <a href="<?= get_the_permalink()?>" class="post__link"></a>
 	<header class="entry-header" >
     <figure class="post__image">
