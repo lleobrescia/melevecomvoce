@@ -56,6 +56,10 @@
   &.post--list {
     position: relative;
 
+    .entry-content {
+      padding-bottom: 0;
+    }
+
     .post__image {
       position: relative;
       overflow: hidden;
