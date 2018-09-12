@@ -109,9 +109,14 @@ function melevecomvoce_scripts()
 {
   wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
+  wp_enqueue_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css');
+
   wp_enqueue_style('font-roboto', 'https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
-  wp_enqueue_style('melevecomvoce-style', get_stylesheet_uri(), array('font-awesome', 'font-roboto'));
+  wp_enqueue_style('melevecomvoce-style', get_stylesheet_uri(), array('font-awesome', 'animate-css', 'font-roboto'));
+
+  wp_enqueue_script('melevecomvoce-wow', 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js', array('jquery'), '20151215', true);
+
 
   wp_enqueue_script('melevecomvoce-bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js', array('jquery'), '20151215', true);
 
