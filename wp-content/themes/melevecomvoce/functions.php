@@ -76,10 +76,10 @@ function melevecomvoce_setup()
    * @link https://codex.wordpress.org/Theme_Logo
    */
   add_theme_support('custom-logo', array(
-    'height' => 250,
-    'width' => 250,
-    'flex-width' => true,
-    'flex-height' => true,
+    'height'      => 250,
+    'width'       => 250,
+    'flex-width'  => true,
+    'flex-height' =>  true,
   ));
 }
 endif;
@@ -179,6 +179,12 @@ require get_template_directory() . '/inc/breadcrumb.php';
  * Related Posts
  */
 require get_template_directory() . '/inc/related-posts.php';
+
+/**
+ * Mandatory Excerpt
+ */
+require get_template_directory() . '/inc/mandatory_excerpt.php';
+
 
 /**
  * Load Jetpack compatibility file.
